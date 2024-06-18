@@ -40,7 +40,6 @@
 \renewcommand{\printsongnum}[1]{{%
 \begin{tikzpicture}[remember picture, overlay]
     \draw (1,-0.3) node[] (stred) {};
-
     \node at (stred) {\bfseries\cislosize#1};
 \draw[line join = round,line width = \TLOUSTKA] (1,-0.3) circle[radius=0.5, ];
     \foreach \angle in { 0,45,...,359  }
@@ -122,8 +121,7 @@
         \vskip\beforepostludeskip\relax%
         \nointerlineskip%
         \vbox{\makepostlude}%
-        \CARAKONEC
-
+        \CARAKONEC%
       }%
     \endgroup%
     \SB@insongfalse%
@@ -262,15 +260,16 @@
 \usepackage{xcolor}
 
 
-\ifdefined\draft
-\newcommand\printwmark{true}
-\else
-\newcommand\printwmark{false}
-\fi
-\usepackage[printwatermark=\printwmark]{xwatermark}
-\newwatermark[evenpages,color=blue!20,angle=90,scale=5,xpos=60,ypos=-5]{\sffamily D R A F T}
-\newwatermark[allpages,color=blue!20,scale=1,xpos=0,ypos=-140]{\sffamily \today\ \currenttime}
-\newwatermark[oddpages,color=blue!20,angle=90,scale=5,xpos=-100,ypos=-2]{\sffamily D R A F T}
+%WATERMARK CAUSES ! Extra \endgroup.
+%\ifdefined\draft
+%\newcommand\printwmark{true}
+%\else
+%\newcommand\printwmark{false}
+%\fi
+%\usepackage[printwatermark=\printwmark]{xwatermark}
+%\newwatermark[evenpages,color=blue!20,angle=90,scale=5,xpos=60,ypos=-5]{\sffamily D R A F T}
+%\newwatermark[allpages,color=blue!20,scale=1,xpos=0,ypos=-140]{\sffamily \today\ \currenttime}
+%\newwatermark[oddpages,color=blue!20,angle=90,scale=5,xpos=-100,ypos=-2]{\sffamily D R A F T}
 
 
 
@@ -343,7 +342,7 @@
 
 
 
-\usepackage[export]{adjustbox}
+%\usepackage[export]{adjustbox}
 
 
 %--------------------------------------nastavení obsahu
