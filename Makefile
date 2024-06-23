@@ -1,7 +1,7 @@
 
 prepare-minivlcice:
 	cd score;for noty in *.ly ; do \
-      lilypond --eps $$noty ; \
+      lilypond -ddelete-intermediate-files='#f' -dcrop='#t' --eps $$noty ; \
     done
 	xelatex zpevnik_minivlcice.tex
 	LC_ALL=cs_CZ.UTF-8 texlua songidx.lua minivlciceidx.sxd minivlciceidx.sbx
