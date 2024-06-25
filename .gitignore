@@ -1,0 +1,10 @@
+images/*.pdf
+*.sxd
+*.aux
+*.log
+*.out
+*.sxc
+*.gz
+*.xwm
+!score/*.ly
+score/*
