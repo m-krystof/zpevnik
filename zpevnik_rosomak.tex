@@ -19,6 +19,35 @@
 
 %%%%%%%%%%%%%%%%%
 \makeatletter
+\def\sbChord#1{%
+  \ifx#1\relax%
+    \let\next=\relax%
+  \else%
+    \ifx#1##% double sharp because we're inside a \def
+      $\sharp$%
+    \else%
+      \ifx#1b%
+        b% $\flat$ has been used in songbook, overwritting default behavious%
+      \else%
+        \ifx#1/%
+          \ChBassFont /%
+        \else%
+          \ifx#1[%
+            \bgroup\ChBkFont [\egroup%
+          \else%
+            \ifx#1]%
+              \bgroup\ChBkFont ]\egroup%
+            \else%
+              #1%
+            \fi%
+          \fi%
+        \fi%
+      \fi%
+    \fi%
+    \let\next=\sbChord%
+  \fi%
+  \next%
+}
 
 \begingroup
   \lccode`\~=`\& % allow using & without \&
