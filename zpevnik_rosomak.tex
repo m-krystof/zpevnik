@@ -44,7 +44,7 @@
   \def\SLOKA{\item}
   \WithSuffix\newcommand\SLOKA*{\item[]}
   \def\REFREN{\item[Ref.:]}
-  \def\REFRENHRAJ{\item[Ref.]\,}
+  \def\REFRENHRAJ{}
   \def\INTERM{\item}
   \def\NL{\\*}
   \begin{enumerate}%
@@ -138,11 +138,11 @@
 \headheight 0cm
 \headsep 20pt
 \textheight 27.5cm
-\textwidth 15.5cm   %přesáhne maximálně 0.5 cm za okraj   (59 Ví Bůh kolik...)
+\textwidth 16cm   %přesáhne maximálně 0.5 cm za okraj   (59 Ví Bůh kolik...)
 \marginparsep 1cm
 \marginparwidth 0cm
 
-\oddsidemargin 5cm
+\oddsidemargin 4cm
 \evensidemargin 1cm
 
 
@@ -200,7 +200,7 @@
 \begin{tikzpicture}[remember picture,overlay]
 \node at (165mm,-1.5mm) {\tiny ver.\yyyymmdddate\today\currenttime};
 \end{tikzpicture}
-\includegraphics[width=1.15\textwidth]{images/titulni.eps}
+\includegraphics[width=1.05\textwidth]{images/titulni.eps}
 \vfil\
 
 %\end{titlepage}
@@ -314,6 +314,7 @@ NEPRODEJNÉ\,!}
 \vfil
 \input{songs/tobe_pane_dik.tex} % 52
 \input{songs/tolik_planych_slov.tex} % 53
+\vfil
 \input{songs/tva_svoboda.tex} % 54
 \vfil
 \input{songs/uz_k_nam_prisel_bracha_den.tex} % 55
@@ -353,7 +354,7 @@ NEPRODEJNÉ\,!}
 \input{songs/kladivo.tex} % 69
 \input{songs/ryl_jen_celej_den_ryl.tex} % 70
 \pagebreak
-\vspace*{-1cm}\hspace*{6cm}\includegraphics[height=4.5cm]{images/14.eps}\vspace*{-3,5cm}
+\vspace*{-1.3cm}\hspace*{6cm}\includegraphics[height=3.5cm]{images/14.eps}\vspace*{-2.5cm}
 \input{songs/jonatan.tex} % 71
 \input{songs/severni_vitr.tex} % 72
 \hspace*{5cm}\includegraphics[width=6cm]{images/15.eps}
@@ -373,13 +374,14 @@ NEPRODEJNÉ\,!}
 \pagebreak
 \input{songs/strom.tex} % 77
 \input{songs/franky_dlouhan.tex} % 78
+\input{songs/skautska_vecerka.tex} % 82
+\input{songs/zajici.tex} % 80
+\pagebreak
 \input{songs/doney_gal.tex} % 79
 \vfil
-\hspace*{2cm}\includegraphics[width=10cm]{images/18.eps}
+\hspace*{2cm}\includegraphics[width=7cm]{images/18.eps}
 \vfil
-\input{songs/zajici.tex} % 80
 \input{songs/dokud_se_zpiva.tex} % 81
-\input{songs/skautska_vecerka.tex} % 82
 \pagebreak
 \input{songs/hora_rip.tex} % 83
 \input{songs/praminek_vlasu.tex} % 84
@@ -388,10 +390,7 @@ NEPRODEJNÉ\,!}
 \input{songs/skrhola.tex} % 86
 \pagebreak
 \input{songs/kos.tex} % 87
-\input{songs/proc_se_lidi_nemaj_radi.tex} % 88
 \input{songs/marniva_sestrenice.tex} % 89
-\input{songs/kam_se_podel_asi.tex} % 90
-\input{songs/sup_a_zluva.tex} % 91
 \input{songs/sadlo_na_chleba.tex} % 92
 \pagebreak
 \input{songs/pisnicka_o_davidovi.tex} % 93
@@ -404,12 +403,10 @@ NEPRODEJNÉ\,!}
 \pagebreak
 \input{songs/krajina_posedla_tmou.tex} % 98
 \input{songs/hau_bilou_plani.tex} % 99
-\input{songs/pisen_proti_trudnomyslnosti_2008.tex} % 100
 \pagebreak
-\input{songs/hymna_2010.tex} % 101
 \newevenside
-\input{songs/prorok_elias_(hymna_2011).tex} % 102
 \input{songs/nejsi_sam_svuj.tex} % 103
+\pagebreak
 \input{songs/neboj_se.tex} % 104
 \input{songs/stale_jen_chceme_zpivat.tex} % 105
 \input{songs/zpivej_panu_haleluja.tex} % 106
@@ -420,26 +417,35 @@ NEPRODEJNÉ\,!}
 \input{songs/vzdam_celym_srdcem_svym.tex} % 109
 \input{songs/muj_buh_je_muj_stit.tex} % 110
 \pagebreak
+\input{songs/babylon.tex} % 114
+\input{songs/svita_novej_den.tex} % 116
+\pagebreak
+\input{songs/tri_mladenci.tex} % 115
+\pagebreak
+\input{songs/balada_velkopatecni} %121
+\input{songs/pisen_proti_trudnomyslnosti_2008.tex} % 100
+\input{songs/ahoj_slunko} %122
+\pagebreak
+\input{songs/utery_konci_stredou} %123
+\pagebreak
+\input{songs/zpev_o_slunci} %127
+\input{songs/hymna_2010.tex} % 101
+\pagebreak
+\input{songs/prorok_elias_(hymna_2011).tex} % 102
+\pagebreak
 \input{songs/hymna_2012.tex} % 111
 \input{songs/abraham_(hymna_2013).tex} % 112
 \input{songs/od_japoncu_k_jakubovi(hymna_2014).tex} % 113
-\input{songs/babylon.tex} % 114
-\input{songs/tri_mladenci.tex} % 115
-\pagebreak
-\input{songs/svita_novej_den.tex} % 116
 \input{songs/babylon_a_my_(hymna_2015).tex} % 117
 \pagebreak
 \input{songs/hymna_2016.tex} %118
 \input{songs/hymna_2017.tex} %119
 \input{songs/ach_ach_ach_(hymna_2018)} %120
-\input{songs/balada_velkopatecni} %121
-\input{songs/ahoj_slunko} %122
-\input{songs/utery_konci_stredou} %123
-\pagebreak
 \input{songs/hymna_2019_kniha_soudcu} %124
 \input{songs/hymna_2020_labyrint_sveta_a_raj_srdce} %125
 \input{songs/hymna_2021_nevidano} %126
-\input{songs/zpev_o_slunci} %127
+\input{songs/hymna_2022_narnie} %126
+
 
 \newpage ~ % empty page
 \newpage ~ % empty page
