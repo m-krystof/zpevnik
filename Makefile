@@ -17,9 +17,11 @@ minivlcice-final-print: minivlcice
 	echo showpage | ps2pdf -sPAPERSIZE=a4 - blank_a4.pdf
 	pdftk A=zpevnik_minivlcice.pdf B=blank_a4.pdf cat B1 A1-end output - | pdfjam --nup 2x2 --no-landscape --scale 0.95 --outfile 'zpevnik_minivlcice_nahledy.pdf'  '/dev/stdin'
 
-minivlcice-publish: minivlcice
+minivlcice-publish: minivlcice minivlcice-final-print
 	cp zpevnik_minivlcice.pdf docs/zpevnik_minivlcice.pdf
-	git add -f docs/zpevnik_minivlcice.pdf
+	cp zpevnik_minivlcice_2x1.pdf docs/zpevnik_minivlcice_2x1.pdf
+	cp zpevnik_minivlcice_nahledy.pdf docs/zpevnik_minivlcice_nahledy.pdf	
+	git add -f docs/zpevnik_minivlcice*.pdf
 	git commit docs/zpevnik_minivlcice*.pdf -m $(shell date '+"publishing minivlcice %Y-%m-%d"')
 	git push
 
